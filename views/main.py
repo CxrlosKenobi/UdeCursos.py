@@ -9,7 +9,7 @@ layout = html.Div([
 	dcc.Location(id='main', refresh=True),
 	html.Div([
 		html.P([
-			'Inserte sus asignaturas'
+			'Generador de horario'
 		], className='sign'),
         html.H1([
             dcc.Dropdown(
