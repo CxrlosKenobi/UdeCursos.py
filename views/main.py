@@ -41,7 +41,7 @@ layout = html.Div([
 			children='Generar',
 			n_clicks=0,
 			type='submit',
-			className='submit'
+			className='button'
 		)
 	], className='main'),
 	html.Div(id='output-state',children=''),
