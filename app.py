@@ -11,10 +11,14 @@ header = html.Div(
         html.Div(
             style={'height':'100%'},
             children=[
+                html.Img(
+                src='assets/udeconline.png',
+                className='banner-img'
+                ),
 				html.H1(
 					'Ingeniería Civil Informática',
                     className='banner-h1'
-					),
+				),
 				html.P(
 					'UdeC - 2021',
                     className='banner-p'

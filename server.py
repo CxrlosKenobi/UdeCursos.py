@@ -19,6 +19,7 @@ app = dash.Dash(
 )
 
 server = app.server
+app.title = 'Malla INF'
 app.config.suppress_callback_exceptions = True
 app.css.config.serve_locally = True
 app.scripts.config.serve_locally = True
