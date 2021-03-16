@@ -4,7 +4,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 from server import app, server
-from views import main
+from views import main, horario
 
 # header = html.Div(
 #     className='header',
@@ -32,10 +32,10 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '/':
         return main.layout
-    # elif pathname == '/horario':
-    #     return schedule.layout
-    # elif pathname == '/malla':
-    #     return malla.layout
+    elif pathname == '/horario':
+        return horario.layout
+    elif pathname == '/malla':
+        return malla.layout
     else:
         return '404'
 

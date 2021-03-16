@@ -16,18 +16,64 @@ layout = html.Div([
                 options=semesters,
                 multi=True,
                 searchable=True,
-                placeholder='Semestres de tus ramos'
+                placeholder='Semestres de tus ramos',
+				optionHeight=50,
+				persistence=True,
+				persistence_type='session',
+				className='select_box'
             )
         ], className='un'),
 		html.H1([
             dcc.Dropdown(
+			id='dropdown-s',
             options=subjects,
             multi=True,
             searchable=True,
-            placeholder='Ramos'
+            placeholder='Ramos',
+			optionHeight=50,
+			persistence=True,
+			persistence_type='session',
+			className='select_box'
             )
 		], className='un'),
-		html.Button(children='Login', n_clicks=0, type='submit', className='submit')
+		html.Button(
+			id='generate-button',
+			children='Generar',
+			n_clicks=0,
+			type='submit',
+			className='submit'
+		)
 	], className='main'),
-	html.Div(id='output-state',children='')
+	html.Div(id='output-state',children=''),
+	# html.Footer([
+	# 	html.P([
+	# 		html.A('Contacto')
+	# 	], className='contact'),
+	# 	html.P([
+	# 		'Creado por Kenobi',
+	# 		html.Br(),
+	# 		'Código fuente'
+	# 	], className='madeby'),
+	# 	html.P([
+	# 		'Última actualización: ',
+	# 		html.Br(),
+	# 		html.Span('12-01-2020 16:32:39')
+	# 	], className='lastUpdate')
+	# ], className='footer')
 ])
+
+@app.callback(
+	Output('main', 'pathname'),
+	[Input('generate-button', 'n_clicks'),
+	Input('dropdown-s', 'subjects')]
+)
+def horario(n_clicks, subjects):
+	if n_clicks > 0:
+		return '/horario'
+
+
+#
+# @app.callback(
+# 	Output('output-state', 'children'),
+# 	[Input('')]
+# )

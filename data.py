@@ -24,3 +24,5 @@ semesters = [
     {'label': 'VIII', 'value':'VIII'},
     {'label': 'IX', 'value':'IX'},
 ]
+
+table = ['Horas', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
