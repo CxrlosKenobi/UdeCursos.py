@@ -26,3 +26,18 @@ semesters = [
 ]
 
 table = ['Horas', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
+
+ramos = [
+    {'name': ['Año 1', 'I', 'Álgebra I'], 'id': '1'},
+    {'name': ['Año 1', 'II', 'Álgebra II'], 'id': '2'},
+    {'name': ['Año 2', 'III', 'Cálculo III'], 'id': '3'},
+    {'name': ['Año 2', 'IV', 'Programación II'], 'id': '4'},
+    {'name': ['Año 3', 'V', 'Economía'], 'id': '5'},
+    {'name': ['Año 3', 'VI', 'Estadísticas'], 'id': '6'},
+    {'name': ['Año 4', 'VII', 'Sistemas Operativos'], 'id': '7'},
+    {'name': ['Año 4', 'VIII', 'Optimización I'], 'id': '8'},
+    {'name': ['Año 5', 'IX', 'Inteligencia Artificial'], 'id': 'codigo'},
+    {'name': ['Año 5', 'X', 'Memoria de Título I'], 'id': '9'},
+    {'name': ['Año 5 1/2', 'XI', 'Memoria de Título II'], 'id': '10'},
+
+]

@@ -4,25 +4,33 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 from server import app, server
-from views import main, horario
+from views import main, horario, malla
 
-# header = html.Div(
-#     className='header',
-#     children=html.Div(
-#         className='container-width',
-#         style={'height':'100%'},
-#         children=[
-#             html.H1(''),
-#             html.Div(
-#                 className='links',
-#                 children=[
-#                     html.P('')
-#                 ]
-#             )
-#         ]
-#     )
-# )
+header = html.Div(
+    [
+        html.Div(
+            style={'height':'100%'},
+            children=[
+				html.H1(
+					'Ingeniería Civil Informática',
+                    className='banner-h1'
+					),
+				html.P(
+					'UdeC - 2021',
+                    className='banner-p'
+                ),
+                html.Div(
+                    className='links',
+                    children=[
+                        html.P('')
+                ]
+            )
+        ]
+    )
+], className='banner')
+
 app.layout = html.Div([
+	header,
 	html.Div(id='page-content', className='content'),
 	dcc.Location(id='url', refresh=False)
 ])

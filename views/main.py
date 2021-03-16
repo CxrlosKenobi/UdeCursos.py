@@ -69,7 +69,7 @@ layout = html.Div([
 )
 def horario(n_clicks, subjects):
 	if n_clicks > 0:
-		return '/horario'
+		return '/malla'
 
 
 #
