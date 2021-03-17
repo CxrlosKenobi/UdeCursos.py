@@ -72,7 +72,7 @@ layout = html.Section([
                     subject(name='Cálculo II', color='#284ABF',column=1, row=0),
                     subject(name='Álgebra II', color='#284ABF', column=1, row=1),
                     subject(name='Física II', color='#572364', column=1, row=2),
-                    subject(name='Intro. al desarrollo de soluciones informáticas', color='#609B89', column=1, row=3),
+                    subject(name='Intro. al Desarrollo de Soluciones Informáticas', color='#609B89', column=1, row=3),
                     subject(name='Intro. a la Innovación en Ingeniería', color='#609B89', column=1, row=4),
                 ]),
             ], className='canvas')
