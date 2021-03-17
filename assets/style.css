@@ -1,7 +1,3 @@
-/* #app-container * {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-} */
 html {
   background-color: #28242e;
   background-size: cover;
@@ -14,7 +10,7 @@ body {
   margin: 0;
   max-width: 100% !important;
   color: #506784;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
 /* Header */
@@ -27,6 +23,33 @@ body {
   -webkit-box-shadow: 0px 5px 5px 0px rgba(100, 100, 100, 0.1);
   -moz-box-shadow:    0px 5px 5px 0px rgba(100, 100, 100, 0.1);
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+.banner-title {
+  padding-left: 90px;
+  font-style: lighter !important;
+  color: white;
+}
+.banner-button-m {
+  position: absolute;
+  left: 560px;
+  top: 23px;
+  margin: 2px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: media;
+}
+.banner-button-h {
+  position: absolute;
+  left: 400px;
+  top: 23px;
+  margin: 2px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: media;
 }
 .banner-h1 {
   position: absolute;
@@ -145,6 +168,22 @@ a {
 /* End main */
 
 /* Malla  START */
+.ramo {
+  display: inline-block;
+  position: absolute;
+  margin: 2px;
+  text-align: center;
+  top: 215px;
+  left: 87px;
+  height: 70px;
+  width: 100px;
+  font-size: 12px;
+  background-color: #284ABF;
+  font-weight: normal;
+  color: white;
+  border-radius: 10px;
+  border-color: transparent
+}
 .container-fluid {
   width: 100%;
   padding-right: 10px;
@@ -153,27 +192,14 @@ a {
   margin-left: auto;
 }
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -12px;
-  margin-left: -12px;
 }
 .col {
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   max-width: 100%;
 }
 .canvas {
     text-align: center;
     overflow-x: auto;
     min-height: 751px;
-    padding-top: 1rem !important
 }
 .year {
   background-color: transparent;

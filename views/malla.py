@@ -19,6 +19,21 @@ def semester_button(value):
         className='semester'
     )
 
+def subject(name, color, column, row):
+    row *= 75
+    column *= 105
+    return html.Button(
+        id='subject-button',
+        children=name,
+        n_clicks=0,
+        className='ramo',
+        style={
+            'background-color': f'{color}',
+            'top': f'{215+row}px',
+            'left': f'{87+column}px',
+        }
+    )
+
 layout = html.Section([
     html.Div([
         html.Div([
@@ -44,7 +59,22 @@ layout = html.Section([
                     semester_button('IX'),
                     semester_button('X'),
                     semester_button('XI'),
-                ])
+                ]),
+                html.Div([
+                    # Semestre I
+                    subject(name='Cálculo I', color='#284ABF', column=0, row=0),
+                    subject(name='Álgebra I', color='#284ABF', column=0, row=1),
+                    subject(name='Física I', color='#572364', column=0, row=2),
+                    subject(name='Química General I', color='#EB8C04', column=0, row=3),
+                    subject(name='Intro. a la Ingeniería Informática', color='#609B89', column=0, row=4),
+
+                    # Semestre II
+                    subject(name='Cálculo II', color='#284ABF',column=1, row=0),
+                    subject(name='Álgebra II', color='#284ABF', column=1, row=1),
+                    subject(name='Física II', color='#572364', column=1, row=2),
+                    subject(name='Intro. al desarrollo de soluciones informáticas', color='#609B89', column=1, row=3),
+                    subject(name='Intro. a la Innovación en Ingeniería', color='#609B89', column=1, row=4),
+                ]),
             ], className='canvas')
         ], className='col')
     ], className='row')

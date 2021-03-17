@@ -15,6 +15,20 @@ header = html.Div(
                 src='assets/udeconline.png',
                 className='banner-img'
                 ),
+                html.H2(
+                    'Malla Interactiva',
+                    className='banner-title'
+                ),
+                html.Button(
+                    id='',
+                    children='Generador horario',
+                    className='banner-button-h'
+                ),
+                html.Button(
+                    id='',
+                    children='Malla',
+                    className='banner-button-m'
+                ),
 				html.H1(
 					'Ingeniería Civil Informática',
                     className='banner-h1'
