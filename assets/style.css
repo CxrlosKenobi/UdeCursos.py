@@ -10,7 +10,8 @@ body {
   margin: 0;
   max-width: 100% !important;
   color: #506784;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: Ubuntu, sans-serif !important;
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif !important; */
 }
 
 /* Header */
@@ -31,7 +32,7 @@ body {
 }
 .banner-button-m {
   position: absolute;
-  left: 515px;
+  left: 520px;
   top: 25px;
   margin: 2px;
   background-color: transparent;
@@ -133,7 +134,6 @@ body {
   margin-left: 46px;
   text-align: left;
   margin-bottom: 27px;
-  font-family: 'Ubuntu', sans-serif;
 }
 
 .un:focus {

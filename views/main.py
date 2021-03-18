@@ -69,11 +69,4 @@ layout = html.Div([
 )
 def horario(n_clicks, subjects):
 	if n_clicks > 0:
-		return '/malla'
-
-
-#
-# @app.callback(
-# 	Output('output-state', 'children'),
-# 	[Input('')]
-# )
+		return '/horario'

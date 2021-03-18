@@ -19,7 +19,7 @@ header = html.Div([
     dbc.Nav(
         [
             dbc.NavLink(
-                'Generador de Malla',
+                'Generador de Horario',
                 href='/',
                 active='exact',
                 className='banner-button-h'
