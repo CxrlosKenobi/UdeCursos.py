@@ -1,6 +1,7 @@
 # Dash app initialization
 import dash
 import dash_html_components
+import dash_bootstrap_components as dbc
 # User management initialization
 # from config import config
 import os
@@ -15,7 +16,8 @@ app = dash.Dash(
             'name': 'viewport',
             'content': 'width=device-width, initial-scale=1, shrink-to-fit=no'
         }
-    ]
+    ],
+    # external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
 
 server = app.server

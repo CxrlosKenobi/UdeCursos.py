@@ -1,4 +1,5 @@
 # index page
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -6,45 +7,40 @@ from dash.dependencies import Input, Output
 from server import app, server
 from views import main, horario, malla
 
-header = html.Div(
-    [
-        html.Div(
-            style={'height':'100%'},
-            children=[
-                html.Img(
-                src='assets/udeconline.png',
-                className='banner-img'
-                ),
-                html.H2(
-                    'Malla Interactiva',
-                    className='banner-title'
-                ),
-                html.Button(
-                    id='',
-                    children='Generador horario',
-                    className='banner-button-h'
-                ),
-                html.Button(
-                    id='',
-                    children='Malla',
-                    className='banner-button-m'
-                ),
-				html.H1(
-					'Ingeniería Civil Informática',
-                    className='banner-h1'
-				),
-				html.P(
-					'UdeC - 2021',
-                    className='banner-p'
-                ),
-                html.Div(
-                    className='links',
-                    children=[
-                        html.P('')
-                ]
-            )
-        ]
-    )
+header = html.Div([
+    html.Img(
+        src='assets/udeconline.png',
+        className='banner-img'
+    ),
+    html.H2(
+        'Malla Interactiva',
+        className='banner-title'
+    ),
+    dbc.Nav(
+        [
+            dbc.NavLink(
+                'Generador de Malla',
+                href='/',
+                active='exact',
+                className='banner-button-h'
+            ),
+            dbc.NavLink(
+                'Malla',
+                href='/malla',
+                active='exact',
+                className='banner-button-m'
+            ),
+        ],
+        pills=True
+    ),
+    html.H1(
+        'Ingeniería Civil Informática',
+        className='banner-h1'
+    ),
+    html.P(
+        'UdeC - 2021',
+        className='banner-p'
+    ),
 ], className='banner')
 
 app.layout = html.Div([

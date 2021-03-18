@@ -31,8 +31,8 @@ body {
 }
 .banner-button-m {
   position: absolute;
-  left: 560px;
-  top: 23px;
+  left: 515px;
+  top: 25px;
   margin: 2px;
   background-color: transparent;
   border-color: transparent;
@@ -42,8 +42,8 @@ body {
 }
 .banner-button-h {
   position: absolute;
-  left: 400px;
-  top: 23px;
+  left: 350px;
+  top: 25px;
   margin: 2px;
   background-color: transparent;
   border-color: transparent;

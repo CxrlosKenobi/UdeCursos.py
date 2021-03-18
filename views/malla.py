@@ -16,8 +16,7 @@ def semester_button(value):
     return html.Button(
         children=value,
         n_clicks=0,
-        className='semester'
-    )
+        className='semester')
 
 def subject(name, color, column, row):
     row *= 75
