@@ -30,17 +30,6 @@ body {
   font-style: lighter !important;
   color: white;
 }
-.banner-button-m {
-  position: absolute;
-  left: 520px;
-  top: 25px;
-  margin: 2px;
-  background-color: transparent;
-  border-color: transparent;
-  font-size: 0.9rem;
-  color: white;
-  font-weight: media;
-}
 .banner-button-h {
   position: absolute;
   left: 350px;
@@ -52,9 +41,31 @@ body {
   color: white;
   font-weight: media;
 }
+.banner-button-mh {
+  position: absolute;
+  left: 520px;
+  top: 25px;
+  margin: 2px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: media;
+}
+.banner-button-m {
+  position: absolute;
+  left: 615px;
+  top: 25px;
+  margin: 2px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: media;
+}
 .banner-h1 {
   position: absolute;
-  left: 1110px;
+  left: 1130px;
   top: 15px;
   z-index: 2;
   align-self: center !important;

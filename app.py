@@ -25,6 +25,11 @@ header = html.Div([
                 className='banner-button-h'
             ),
             dbc.NavLink(
+                'Mi horario',
+                href='/horario',
+                className='banner-button-mh'
+            ),
+            dbc.NavLink(
                 'Malla',
                 href='/malla',
                 active='exact',
