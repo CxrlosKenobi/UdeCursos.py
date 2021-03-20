@@ -6,10 +6,14 @@ from dash.dependencies import Input, Output, State
 from server import app
 from data import subjects, semesters, table
 import pandas as pd
+import csv
 
 df = pd.read_csv('sched_data.csv')
+
 layout = html.Div([
+    dcc.Location(id='horario', refresh=True),
     html.Div([
+        html.H1(id='hh'),
         dash_table.DataTable(
             id='table',
             columns=[{'name': day, 'id': day} for day in table],
@@ -21,6 +25,9 @@ layout = html.Div([
             },
             style_cell={
                 'height': 'auto',
+                'maxWidth': '111px',
+                'textOverflow': 'ellipsis',
+                'overflow': 'hidden'
 
             },
             style_cell_conditional=[
@@ -58,6 +65,22 @@ layout = html.Div([
                 'height': '300px',
                 'minWidth': '100%'
             }
-        )
+        ),
+        html.Div(id='output')
     ])
 ])
+
+# @app.callback(
+#     Output('table', 'children'),
+#     [Input()]
+# )
+
+# @app.callback(
+#     Output('output', 'children'),
+#     [Input('hh', 'ramosValue')]
+# )
+# def update_data():
+#     with open('ramos.csv', 'r') as file:
+#         reader = csv.reader(file)
+#         ramosValue = list(reader)
+#     return ramosValue

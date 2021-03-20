@@ -8,6 +8,35 @@ X = ['' for x in range(1, 12)]
 J = ['' for j in range(1, 12)]
 V = ['' for v in range(1, 12)]
 
+L[2] = 'Intro. Ing Informática'
+L[3] = 'Intro. Ing Informática'
+
+M[2] = 'Álgebra I'
+M[3] = 'Álgebra I'
+J[2] = 'Álgebra I'
+J[3] = 'Álgebra I'
+M[7] = 'Álgebra I Lab'
+M[8] = 'Álgebra I Lab'
+
+X[2] = 'Física I'
+X[3] = 'Física I'
+V[4] = 'Física I'
+
+M[0] = 'Cálculo I'
+M[1] = 'Cálculo I'
+J[0] = 'Cálculo I'
+J[1] = 'Cálculo I'
+X[7] = 'Cálculo I Lab'
+X[8] = 'Cálculo I Lab'
+
+X[0] = 'Química General I'
+X[1] = 'Química General I'
+V[0] = 'Química General I'
+V[1] = 'Química General I'
+V[7] = 'Químimca General I Lab'
+V[8] = 'Químimca General I Lab'
+
+
 with open('sched_data.csv', 'w') as file:
     file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
@@ -21,6 +50,11 @@ subjects = [
     {'label': '525140-8 Álgebra I', 'value': 'ALG101-8'},
     {'label': '525140-7 Álgebra I', 'value': 'ALG101-7'},
     {'label': '525140-6 Álgebra I', 'value': 'ALG101-6'},
+    {'label': '525140-5 Álgebra I', 'value': 'ALG101-7'},
+    {'label': '525140-4 Álgebra I', 'value': 'ALG101-7'},
+    {'label': '525140-3 Álgebra I', 'value': 'ALG101-7'},
+    {'label': '525140-2 Álgebra I', 'value': 'ALG101-7'},
+    {'label': '525140-1 Álgebra I', 'value': 'ALG101-7'},
     {'label': '527140-5 Cálculo I', 'value': 'CAL101-5'},
     {'label': '527140-4 Cálculo I', 'value': 'CAL101-4'},
     {'label': '531140-9 Química General I', 'value': 'QG101-9'},

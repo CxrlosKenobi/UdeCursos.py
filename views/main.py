@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output, State
 
 from server import app
 from data import subjects, semesters
-
+import csv
 layout = html.Div([
 	dcc.Location(id='main', refresh=True),
 	html.Div([
@@ -25,15 +25,15 @@ layout = html.Div([
         ], className='un'),
 		html.H1([
             dcc.Dropdown(
-			id='dropdown-s',
-            options=subjects,
-            multi=True,
-            searchable=True,
-            placeholder='Ramos',
-			optionHeight=50,
-			persistence=True,
-			persistence_type='session',
-			className='select_box'
+				id='dropdown-s',
+	            options=subjects,
+	            multi=True,
+	            searchable=True,
+	            placeholder='Ramos',
+				optionHeight=50,
+				persistence=True,
+				persistence_type='session',
+				className='select_box',
             )
 		], className='un'),
 		html.Button(
@@ -44,23 +44,18 @@ layout = html.Div([
 			className='button'
 		)
 	], className='main'),
-	html.Div(id='output-state',children=''),
-	# html.Footer([
-	# 	html.P([
-	# 		html.A('Contacto')
-	# 	], className='contact'),
-	# 	html.P([
-	# 		'Creado por Kenobi',
-	# 		html.Br(),
-	# 		'Código fuente'
-	# 	], className='madeby'),
-	# 	html.P([
-	# 		'Última actualización: ',
-	# 		html.Br(),
-	# 		html.Span('12-01-2020 16:32:39')
-	# 	], className='lastUpdate')
-	# ], className='footer')
+	html.Div(id='output-state')
 ])
+
+@app.callback(
+	Output('output-state', 'children'),
+	[Input('dropdown-s', 'value')]
+)
+def update_output(value):
+	with open('ramos.csv', 'w') as file:
+		file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+		file.writerow(value)
+	return f'You have selected {value}!'
 
 @app.callback(
 	Output('main', 'pathname'),
