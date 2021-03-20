@@ -1,3 +1,19 @@
+import csv
+
+H = [t for t in range(1, 12)]
+hora = [f'{h}:15 - {h+1}:00' for h in range(8, 19)]
+L = ['' for l in range(1, 12)]
+M = ['' for m in range(1, 12)]
+X = ['' for x in range(1, 12)]
+J = ['' for j in range(1, 12)]
+V = ['' for v in range(1, 12)]
+
+with open('sched_data.csv', 'w') as file:
+    file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
+    for i in range(0, 11):
+        file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
+
 subjects = [
     {'label': '510140-8 Física I', 'value': 'FIS101-8'},
     {'label': '510140-7 Física I', 'value': 'FIS101-7'},
@@ -26,6 +42,7 @@ semesters = [
 ]
 
 table = ['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
+
 
 ramos = [
     {'name': ['Año 1', 'I', 'Álgebra I'], 'id': '1'},
