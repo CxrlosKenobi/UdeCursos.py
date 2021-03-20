@@ -25,7 +25,7 @@ semesters = [
     {'label': 'IX', 'value':'IX'},
 ]
 
-table = ['Horas', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
+table = ['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
 
 ramos = [
     {'name': ['Año 1', 'I', 'Álgebra I'], 'id': '1'},

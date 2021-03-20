@@ -36,7 +36,7 @@ header = html.Div([
                 className='banner-button-m'
             ),
         ],
-        pills=True
+        pills=False
     ),
     html.H1(
         'Ingeniería Civil Informática',
