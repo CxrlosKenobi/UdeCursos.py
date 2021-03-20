@@ -48,9 +48,14 @@ header = html.Div([
     ),
 ], className='banner')
 
+footer = html.Div([
+    html.H1('Footer')
+], className='footer')
+
 app.layout = html.Div([
 	header,
 	html.Div(id='page-content', className='content'),
+    footer,
 	dcc.Location(id='url', refresh=False)
 ])
 
