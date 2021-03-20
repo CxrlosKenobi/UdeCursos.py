@@ -25,12 +25,32 @@ layout = html.Div([
             },
             style_cell_conditional=[
             {
+            'if': {'column_id': 'H'},
+            'width': '50px'
+            },
+            {
                 'if': {'column_id': 'Horario'},
                     'width': '11%'
             },
             {
-                'if': {'column_id': 'H'},
-                    'width': '50px'
+                'if': {'column_id': 'Lunes'},
+                    'width': '110px'
+            },
+            {
+                'if': {'column_id': 'Martes'},
+                    'width': '110px'
+            },
+            {
+                'if': {'column_id': 'Miércoles'},
+                    'width': '110px'
+            },
+            {
+                'if': {'column_id': 'Jueves'},
+                    'width': '110px'
+            },
+            {
+                'if': {'column_id': 'Viernes'},
+                    'width': '110px'
             },
             {'textAlign': 'center'}
             ],
