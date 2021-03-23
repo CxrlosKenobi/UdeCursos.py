@@ -24,6 +24,7 @@ layout = html.Div([
                 'color': 'white',
             },
             style_cell={
+                'font_family': 'normal',
                 'height': 'auto',
                 'maxWidth': '111px',
                 'textOverflow': 'ellipsis',
