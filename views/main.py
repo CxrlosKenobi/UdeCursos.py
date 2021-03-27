@@ -5,6 +5,7 @@ from dash.dependencies import Input, Output, State
 from server import app
 from data import subjects, semesters
 import csv
+
 layout = html.Div([
 	dcc.Location(id='main', refresh=True),
 	html.Div([

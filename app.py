@@ -49,7 +49,39 @@ header = html.Div([
 ], className='banner')
 
 footer = html.Div([
-    html.H1('Footer')
+    dbc.NavLink([
+        html.I(className='fas fa-envelope mr-2'),
+        html.A('Contacto'),
+    ],
+        href='/',
+        target='_blank',
+        active='exact',
+        className='footer-p1'
+    ),
+    dbc.NavLink([
+        html.A(
+            'Creado por Kenobi',
+            style={
+                'font-size': '12px',
+            }),
+        html.Br(),
+        html.I(className='fab fa-github mr-2'),
+        html.Span('Código fuente')
+    ],
+        href='https://github.com/CxrlosKenobi/',
+        target='_blank',
+        active='exact',
+        className='footer-p2'
+    ),
+    dbc.NavLink([
+        html.Span('Última actualización:'),
+        html.Br(),
+        html.A('27 Marzo 2021')
+    ],
+        href='/',
+        target='_blank',
+        active='exact', 
+        className='footer-p3')
 ], className='footer')
 
 app.layout = html.Div([
@@ -72,4 +104,4 @@ def display_page(pathname):
         return '404'
 
 if __name__ == '__main__':
-    app.run_server(port=2020, debug=True)
+    app.run_server(port=2021, dev_tools_ui=False, debug=True)

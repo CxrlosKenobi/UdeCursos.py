@@ -33,8 +33,8 @@ X[0] = 'Química General I'
 X[1] = 'Química General I'
 V[0] = 'Química General I'
 V[1] = 'Química General I'
-V[7] = 'Químimca General I Lab'
-V[8] = 'Químimca General I Lab'
+V[7] = 'Química General I Lab'
+V[8] = 'Química General I Lab'
 
 
 with open('sched_data.csv', 'w') as file:
@@ -44,23 +44,23 @@ with open('sched_data.csv', 'w') as file:
         file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
 
 subjects = [
-    {'label': '510140-8 Física I', 'value': 'FIS101-8'},
-    {'label': '510140-7 Física I', 'value': 'FIS101-7'},
-    {'label': '510140-6 Física I', 'value': 'FIS101-6'},
-    {'label': '525140-8 Álgebra I', 'value': 'ALG101-8'},
-    {'label': '525140-7 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '525140-6 Álgebra I', 'value': 'ALG101-6'},
-    {'label': '525140-5 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '525140-4 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '525140-3 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '525140-2 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '525140-1 Álgebra I', 'value': 'ALG101-7'},
-    {'label': '527140-5 Cálculo I', 'value': 'CAL101-5'},
-    {'label': '527140-4 Cálculo I', 'value': 'CAL101-4'},
-    {'label': '531140-9 Química General I', 'value': 'QG101-9'},
-    {'label': '531140-8 Química General I', 'value': 'QG101-8'},
-    {'label': '890191-1 Indu. a la vida universitaria', 'value': 'UDEC101'},
-    {'label': '503120-1 Intr. a la Ingeniería Informática', 'value': 'INIF101'}
+    {'label': 'Física I[8]', 'value': 'FIS101-8'},
+    {'label': 'Física I[7]', 'value': 'FIS101-7'},
+    {'label': 'Física I[6]', 'value': 'FIS101-6'},
+    {'label': 'Álgebra I[8]', 'value': 'ALG101-8'},
+    {'label': 'Álgebra I[7]', 'value': 'ALG101-7'},
+    {'label': 'Álgebra I[6]', 'value': 'ALG101-6'},
+    {'label': 'Álgebra I[5]', 'value': 'ALG101-7'},
+    {'label': 'Álgebra I[4]', 'value': 'ALG101-7'},
+    {'label': 'Álgebra I[3]', 'value': 'ALG101-7'},
+    {'label': 'Álgebra I[2]', 'value': 'ALG101-7'},
+    {'label': 'Álgebra I[1]', 'value': 'ALG101-7'},
+    {'label': 'Cálculo I[5]', 'value': 'CAL101-5'},
+    {'label': 'Cálculo I[4]', 'value': 'CAL101-4'},
+    {'label': 'Química General I[9]', 'value': 'QG101-9'},
+    {'label': 'Química General I[8]', 'value': 'QG101-8'},
+    {'label': 'Indu. a la vida universitaria[1]', 'value': 'UDEC101'},
+    {'label': 'Intr. a la Ingeniería Informática[1]', 'value': 'INIF101'}
 ]
 
 semesters = [

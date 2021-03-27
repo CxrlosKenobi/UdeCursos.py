@@ -6,8 +6,10 @@ import dash_bootstrap_components as dbc
 # from config import config
 import os
 
+FA = "https://use.fontawesome.com/releases/v5.15.1/css/all.css"
 app = dash.Dash(
     __name__,
+    external_stylesheets=[dbc.themes.BOOTSTRAP, FA],
     meta_tags=[
         {
             'charset': 'utf-8',
