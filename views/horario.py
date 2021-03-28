@@ -68,6 +68,9 @@ layout = html.Div([
             }
         ),
         html.Div(id='output')
+    ]),
+    html.Div([
+        html.H1('Exportar a', className='')
     ])
 ])
 

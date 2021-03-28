@@ -60,7 +60,13 @@ footer = html.Div([
     ),
     dbc.NavLink([
         html.A(
-            'Creado por Kenobi',
+            'with ',
+            style={
+                'font-size': '12px'
+            }),
+        html.I(className='fas fa-heart mr-1'),
+        html.A(
+            'by Kenobi',
             style={
                 'font-size': '12px',
             }),

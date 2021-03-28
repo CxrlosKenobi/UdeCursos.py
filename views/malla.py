@@ -20,7 +20,7 @@ def semester_button(value):
 
 def subject(name, color, column, row):
     row *= 80 # 75
-    column *= 105 # 105
+    column *= 102 # 105
     return html.Button(
         id='subject-button',
         children=name,
@@ -29,7 +29,7 @@ def subject(name, color, column, row):
         style={
             'background-color': f'{color}',
             'top': f'{90+row}px',
-            'left': f'{17+column}px',
+            'left': f'{18+column}px',
         }
     )
 
@@ -67,11 +67,31 @@ layout = html.Section([
                 subject(name='Intro. a la Ingeniería Informática', color='#609B89', column=0, row=4),
 
                 # Semestre II
-                subject(name='Cálculo II', color='#284ABF',column=1, row=0),
+                subject(name='Cálculo II', color='#284ABF', column=1, row=0),
                 subject(name='Álgebra II', color='#284ABF', column=1, row=1),
                 subject(name='Física II', color='#572364', column=1, row=2),
                 subject(name='Intro. al Desarrollo de Soluciones Informáticas', color='#609B89', column=1, row=3),
                 subject(name='Intro. a la Innovación en Ingeniería', color='#609B89', column=1, row=4),
+
+                # Semestre III
+                subject(name='Cálculo III', color='#284ABF', column=2, row=0),
+                subject(name='Ecuaciones Diferenciales Ordinarias', color='#4e88c7', column=2, row=1),
+                subject(name='Lógica', color='#A51C30', column=2, row=2),
+                subject(name='Programación I', color='#4db848', column=2, row=3),
+
+                # Semestre IV
+                subject(name='Cálculo Númerico', color='#4e88c7', column=3, row=0),
+                subject(name='Matemáticas Discretas', color='#4e88c7', column=3, row=1),
+                subject(name='Electromagnetismo Aplicado', color='#A51C30', column=3, row=2),
+                subject(name='Programación II', color='#4db848', column=3, row=3),
+                subject(name='Complementario 1', color='#609B89', column=3, row=4),
+
+                # Semestre V
+                subject(name='Estadística', color='#4e88c7', column=4, row=0),
+                subject(name='Mecánica y Termodinámica', color='#A51C30', column=4, row=1),
+                subject(name='Estructuras de datos', color='#4db848', column=4, row=2),
+                subject(name='Electivo 1', color='#609B89', column=4, row=3),
+                subject(name='Complementario 2', color='#609B89', column=4, row=4)
             ]),
         ], className='canvas'),
     ], className='col'),
