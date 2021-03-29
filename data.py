@@ -1,3 +1,7 @@
+# Horario de SECAD
+## SECAD (PDF) a CSV
+## CSV a SQLAlchemy 
+
 import csv
 
 H = [t for t in range(1, 12)]
@@ -44,23 +48,23 @@ with open('sched_data.csv', 'w') as file:
         file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
 
 subjects = [
-    {'label': 'Física I[8]', 'value': 'FIS101-8'},
-    {'label': 'Física I[7]', 'value': 'FIS101-7'},
-    {'label': 'Física I[6]', 'value': 'FIS101-6'},
-    {'label': 'Álgebra I[8]', 'value': 'ALG101-8'},
-    {'label': 'Álgebra I[7]', 'value': 'ALG101-7'},
-    {'label': 'Álgebra I[6]', 'value': 'ALG101-6'},
-    {'label': 'Álgebra I[5]', 'value': 'ALG101-7'},
-    {'label': 'Álgebra I[4]', 'value': 'ALG101-7'},
-    {'label': 'Álgebra I[3]', 'value': 'ALG101-7'},
-    {'label': 'Álgebra I[2]', 'value': 'ALG101-7'},
-    {'label': 'Álgebra I[1]', 'value': 'ALG101-7'},
-    {'label': 'Cálculo I[5]', 'value': 'CAL101-5'},
-    {'label': 'Cálculo I[4]', 'value': 'CAL101-4'},
-    {'label': 'Química General I[9]', 'value': 'QG101-9'},
-    {'label': 'Química General I[8]', 'value': 'QG101-8'},
-    {'label': 'Indu. a la vida universitaria[1]', 'value': 'UDEC101'},
-    {'label': 'Intr. a la Ingeniería Informática[1]', 'value': 'INIF101'}
+    {'label': 'Física I[8]', 'value': '510140-8'},
+    {'label': 'Física I[7]', 'value': '510140-7'},
+    {'label': 'Física I[6]', 'value': '510140-6'},
+    {'label': 'Álgebra I[8]', 'value': '525140-8'},
+    {'label': 'Álgebra I[7]', 'value': '525140-7'},
+    {'label': 'Álgebra I[6]', 'value': '525140-6'},
+    {'label': 'Álgebra I[5]', 'value': '525140-7'},
+    {'label': 'Álgebra I[4]', 'value': '525140-7'},
+    {'label': 'Álgebra I[3]', 'value': '525140-7'},
+    {'label': 'Álgebra I[2]', 'value': '525140-7'},
+    {'label': 'Álgebra I[1]', 'value': '525140-7'},
+    {'label': 'Cálculo I[5]', 'value': '527140-5'},
+    {'label': 'Cálculo I[4]', 'value': '527140-4'},
+    {'label': 'Química General I[9]', 'value': '531140-9'},
+    {'label': 'Química General I[8]', 'value': '531140-8'},
+    {'label': 'Indu. a la vida universitaria[1]', 'value': '890191-1'},
+    {'label': 'Intr. a la Ingeniería Informática[1]', 'value': '503120-1'}
 ]
 
 semesters = [
