@@ -15,7 +15,7 @@ header = html.Div([
         className='banner-img'
     ),
     html.H2(
-        'Malla Interactiva',
+        'UdeCursos.py',
         className='banner-title'
     ),
     dbc.Nav(
@@ -32,7 +32,7 @@ header = html.Div([
                 className='banner-button-mh'
             ),
             dbc.NavLink(
-                'Malla',
+                'Malla Interactiva',
                 href='/malla',
                 active='exact',
                 className='banner-button-m'
