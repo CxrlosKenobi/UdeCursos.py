@@ -19,6 +19,7 @@ def semester_button(value):
         className='semester')
 
 def subject(name, color, column, row):
+    max_fsize = 11 if len(name.split(' ')[0]) > 12 else 12
     row *= 80 # 75
     column *= 102 # 105
     return html.Button(
@@ -30,6 +31,7 @@ def subject(name, color, column, row):
             'background-color': f'{color}',
             'top': f'{90+row}px',
             'left': f'{18+column}px',
+            'font-size': f'{max_fsize}px'
         }
     )
 

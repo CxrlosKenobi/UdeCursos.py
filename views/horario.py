@@ -24,6 +24,7 @@ layout = html.Div([
                 'color': 'white',
             },
             style_cell={
+                'font-size': '15px',
                 'font_family': 'normal',
                 'height': 'auto',
                 'maxWidth': '111px',
