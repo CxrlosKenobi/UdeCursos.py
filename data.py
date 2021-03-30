@@ -12,33 +12,49 @@ X = ['' for x in range(1, 12)]
 J = ['' for j in range(1, 12)]
 V = ['' for v in range(1, 12)]
 
+emptyL = [0, 1, 4, 5, 6, 7, 8, 9, 10]
+# for i in emptyL:
+#     L[i] = ' '
+
 L[2] = 'Intro. Ing Informática'
 L[3] = 'Intro. Ing Informática'
 
-M[2] = 'Álgebra I'
-M[3] = 'Álgebra I'
-J[2] = 'Álgebra I'
-J[3] = 'Álgebra I'
-M[7] = 'Álgebra I Lab'
-M[8] = 'Álgebra I Lab'
+for i in range(0,11):
+    if i is None or i is ' ':
+        L[i] = '1'
 
-X[2] = 'Física I'
-X[3] = 'Física I'
-V[4] = 'Física I'
+
 
 M[0] = 'Cálculo I'
 M[1] = 'Cálculo I'
-J[0] = 'Cálculo I'
-J[1] = 'Cálculo I'
-X[7] = 'Cálculo I Lab'
-X[8] = 'Cálculo I Lab'
+M[2] = 'Álgebra I'
+M[3] = 'Álgebra I'
+M[5] = 'CADE Álgebra I'
+M[6] = 'CADE Álgebra I'
+M[7] = 'Álgebra I Lab'
+M[8] = 'Álgebra I Lab'
+
 
 X[0] = 'Química General I'
 X[1] = 'Química General I'
+X[2] = 'Física I'
+X[3] = 'Física I'
+X[4] = 'CADE Química General I'
+X[5] = 'CADE Química General I'
+X[7] = 'Cálculo I Lab'
+X[8] = 'Cálculo I Lab'
+
+J[0] = 'Cálculo I'
+J[1] = 'Cálculo I'
+J[2] = 'Álgebra I'
+J[3] = 'Álgebra I'
+
 V[0] = 'Química General I'
 V[1] = 'Química General I'
+V[4] = 'Física I'
 V[7] = 'Química General I Lab'
 V[8] = 'Química General I Lab'
+
 
 
 with open('sched_data.csv', 'w') as file:

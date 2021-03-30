@@ -76,7 +76,7 @@ footer = html.Div([
         html.I(className='fab fa-github mr-2'),
         html.Span('Código fuente')
     ],
-        href='https://github.com/CxrlosKenobi/',
+        href='https://github.com/CxrlosKenobi/UdeCursos.py',
         target='_blank',
         active='exact',
         className='footer-p2'
