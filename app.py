@@ -84,7 +84,7 @@ footer = html.Div([
     dbc.NavLink([
         html.Span('Última actualización:'),
         html.Br(),
-        html.A('27 Marzo 2021')
+        html.A('30 Marzo 2021')
     ],
         href='/',
         target='_blank',
