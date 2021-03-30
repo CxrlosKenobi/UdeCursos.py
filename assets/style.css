@@ -206,39 +206,53 @@ a {
 }
 .year {
   background-color: transparent;
-  display: inline-block;
+  /* background-color: #352f3f; */
   color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 18px;
   height: 35px;
-  width: 190px;
+  width: 200px;
   border-radius: .35rem;
   border-color: transparent;
   font-size: 1.1rem;
   font-weight: lighter;
-  margin: 5px;
+  margin: 1px;
+  /* box-shadow: 0px 11px 35px 2px #1d1b21; */
 }
 .year--1-2 {
+  /* background-color: #352f3f; */
   background-color: transparent;
-  display: inline-block;
   color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 1038px;
   height: 35px;
-  width: 100px;
+  width: 95px;
   border-radius: .35rem;
   border-color: transparent;
   font-size: 1.1rem;
   font-weight: lighter;
-  margin: 4px;
+  margin: 1px;
+  /* box-shadow: 0px 11px 35px 2px #1d1b21; */
 }
 .semester {
   background-color: white;
-  display: inline-block;
   color: gray;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 18px;
   height: 35px;
   width: 97px;
   border-radius: .35rem;
   border-color: transparent;
   font-size: 1.1rem;
   font-weight: bolder;
-  margin: 2px;
+  margin: 1px;
+  
 }
 /* Malla END */
 
