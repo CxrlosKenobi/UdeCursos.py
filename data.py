@@ -48,6 +48,8 @@ J[0] = 'Cálculo I'
 J[1] = 'Cálculo I'
 J[2] = 'Álgebra I'
 J[3] = 'Álgebra I'
+J[7] = 'CADE Física I'
+J[8] = 'CADE Física I'
 
 V[0] = 'Química General I'
 V[1] = 'Química General I'
