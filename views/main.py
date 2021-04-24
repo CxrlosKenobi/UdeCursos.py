@@ -3,7 +3,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
 from server import app
-from data import subjects, semesters
+from data import subjects, semesters, schedUpdate
 import csv
 
 layout = html.Div([
@@ -56,6 +56,7 @@ def update_output(value):
 	with open('ramos.csv', 'w') as file:
 		file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		file.writerow(value)
+	schedUpdate(codes=value)
 	return f'You have selected {value}!'
 
 @app.callback(
@@ -66,3 +67,4 @@ def update_output(value):
 def horario(n_clicks, subjects):
 	if n_clicks > 0:
 		return '/horario'
+
