@@ -4,7 +4,7 @@ import dash_table
 from dash.dependencies import Input, Output, State
 
 from server import app
-from data import subjects, semesters, table
+from datapy import subjects, semesters, table
 import pandas as pd
 import csv
 

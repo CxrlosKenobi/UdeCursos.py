@@ -11,7 +11,7 @@ class Data(db.Model):
     name = db.Column(db.String(40))
     credits = db.Column(db.Integer)
     teacher = db.Column(db.String(40))
-    career = db.Column(db.String(40))
+    workday = db.Column(db.String(10))
     schedule = db.Column(db.String(40))
 
 
@@ -21,13 +21,13 @@ Data_tbl = Table('data', Data.metadata)
 def create_data_table():
     Data.metadata.create_all(engine)
 
-def add_data(code, name, credits, teacher, career, schedule):
+def add_data(code, name, credits, teacher, workday, schedule):
     ins = Data_tbl.insert().values(
         code=code,
         name=name,
         credits=credits,
         teacher=teacher,
-        career=career,
+        workday=workday,
         schedule=schedule)
     conn = engine.connect()
     conn.execute(ins)
