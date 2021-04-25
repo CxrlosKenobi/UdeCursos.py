@@ -19,6 +19,7 @@ CREATE TABLE data(
     teacher VARCHAR(40),
     workday VARCHAR(10),
     schedule VARCHAR(10),
+    days VARCHAR(10),
     PRIMARY KEY (code),
     UNIQUE (code)
 );

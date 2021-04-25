@@ -11,8 +11,8 @@ class Data(db.Model):
     name = db.Column(db.String(40))
     credits = db.Column(db.Integer)
     teacher = db.Column(db.String(40))
-    workday = db.Column(db.String(10))
     schedule = db.Column(db.String(40))
+    days = db.Column(db.String(10))
 
 
 Data_tbl = Table('data', Data.metadata)
@@ -21,14 +21,14 @@ Data_tbl = Table('data', Data.metadata)
 def create_data_table():
     Data.metadata.create_all(engine)
 
-def add_data(code, name, credits, teacher, workday, schedule):
+def add_data(code, name, credits, teacher, schedule, days):
     ins = Data_tbl.insert().values(
         code=code,
         name=name,
         credits=credits,
         teacher=teacher,
-        workday=workday,
-        schedule=schedule)
+        schedule=schedule,
+        days=days)
     conn = engine.connect()
     conn.execute(ins)
     conn.close()
@@ -41,7 +41,7 @@ def del_data(code):
 
 
 def show_data():
-    select_st = select([Data_tbl.c.code, Data_tbl.c.name])
+    select_st = select([Data_tbl.c.code, Data_tbl.c.name, Data_tbl.c.schedule, Data_tbl.c.days])
 
     conn = engine.connect()
     rs = conn.execute(select_st)
