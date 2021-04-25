@@ -1,5 +1,5 @@
 # UdeCursos.py 
-### Visual designed platform where students can take a better look to their subjects and their schedules, according to their degree at the Universidad de Concepción.
+### 🚀 Visual designed platform where students 🎓 can take a better look to their subjects and their schedules, according to their degree at the Universidad de Concepción.
 
 ## Current working stage
 - [x] Problem analysis
