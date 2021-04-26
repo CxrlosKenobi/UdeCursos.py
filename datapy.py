@@ -12,17 +12,9 @@ X = ['' for x in range(1, 12)]
 J = ['' for j in range(1, 12)]
 V = ['' for v in range(1, 12)]
 
-emptyL = [0, 1, 4, 5, 6, 7, 8, 9, 10]
-
 for i in range(0,11):
     if i == None or i == ' ':
         L[i] = '1'
-
-
-
-
-
-# codes = ['510140-8', '525140-6']
 
 sched_L = [
     {'code': '503120-1', 'sched': 2},
@@ -42,10 +34,11 @@ sched_X = [
     {'code': '510140-8', 'sched': 2}, # Fisica I
     {'code': '510140-8', 'sched': 3}
 ]
+L[5] = 'Intro. Ing Informática'
+#L[3] = 'Intro. Ing Informática'
 
 def scheds():
     L[2] = 'Intro. Ing Informática'
-    L[3] = 'Intro. Ing Informática'
 
     M[0] = 'Cálculo I'
     M[1] = 'Cálculo I'

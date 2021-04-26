@@ -67,17 +67,17 @@ def getData(vaList): # vaList = ValueList abbreviation
 	cur.close()
 	print(dataQuery)
 
-	for i in dataQuery:
-		i[0][1]
+	# for i in dataQuery:
+	# 	i[0][1]
 	
-	for i in data:
-		days[schedule] = name
+	# for i in data:
+	# 	days[schedule] = name
 
-	with open('sched_data.csv', 'w') as file:
-    	file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    	file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
-    for i in range(0, 11):
-        file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
+	# with open('sched_data.csv', 'w') as file:
+	# 	file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+	# 	file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
+	# for i in range(0, 11):
+	# 	file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
 
 	return dataQuery
 
@@ -91,14 +91,8 @@ def update_output(value):
 		file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		file.writerow(value)
 	# schedUpdate(codes=value)
-	auxgateValue = value
 	getData(value)
 	return f'You have selected {value}!'
-try:
-	getData(auxgateValue)
-except sqlite3.OperationalError:
-	print('sqlite3 Operational Error - Warning')
-	pass
 
 @app.callback(
 	Output('main', 'pathname'),
