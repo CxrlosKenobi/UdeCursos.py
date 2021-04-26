@@ -4,7 +4,7 @@ import dash_table
 from dash.dependencies import Input, Output, State
 
 from server import app
-from data import subjects, semesters, ramos
+from datapy import subjects, semesters, ramos
 
 def year_button(column, value):
     left = 18
