@@ -8,6 +8,7 @@ from dash.dependencies import Input, Output
 
 from server import app, server
 from views import main, horario, malla
+from time import *
 
 header = html.Div([
     html.Img(
@@ -86,7 +87,7 @@ footer = html.Div([
         html.Br(),
         html.A('25 Abril 2021')
     ],
-        href='/',
+        href='https://github.com/CxrlosKenobi/UdeCursos.py/commits/main',
         target='_blank',
         active='exact', 
         className='footer-p3')
@@ -105,6 +106,7 @@ def display_page(pathname):
     if pathname == '/':
         return main.layout
     elif pathname == '/horario':
+        sleep(2)
         return horario.layout
     elif pathname == '/malla':
         return malla.layout

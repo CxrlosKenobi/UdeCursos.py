@@ -10,6 +10,7 @@ cur = conn.cursor()
 print('\n[ ok ] Now connected to the database!')
 t.sleep(1)
 
+# BOOLEAN where 0(false) & 1(true)
 cur.execute(
 """
 CREATE TABLE data(
@@ -20,6 +21,7 @@ CREATE TABLE data(
     workday VARCHAR(10),
     schedule VARCHAR(10),
     days VARCHAR(10),
+    chosen BOOLEAN,
     PRIMARY KEY (code),
     UNIQUE (code)
 );

@@ -15,7 +15,7 @@ layout = html.Div([
     html.Div([
         html.H1(id='hh'),
         dash_table.DataTable(
-            id='table',
+            id='dataTable',
             columns=[{'name': day, 'id': day} for day in table],
             data=df.to_dict('records'),
             style_header={

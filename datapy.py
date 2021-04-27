@@ -1,20 +1,26 @@
 # Horario de SECAD
 ## SECAD (PDF) a CSV
 ## CSV a SQLAlchemy 
-
+from csv import reader
 import csv
 
-H = [t for t in range(1, 12)]
-hora = [f'{h}:15 - {h+1}:00' for h in range(8, 19)]
-L = ['' for l in range(1, 12)]
-M = ['' for m in range(1, 12)]
-X = ['' for x in range(1, 12)]
-J = ['' for j in range(1, 12)]
-V = ['' for v in range(1, 12)]
+# H = [t for t in range(1, 12)]
+# hora = [f'{h}:15 - {h+1}:00' for h in range(8, 19)]
+# L = ['' for l in range(1, 12)]
+# M = ['' for m in range(1, 12)]
+# X = ['' for x in range(1, 12)]
+# J = ['' for j in range(1, 12)]
+# V = ['' for v in range(1, 12)]
 
-for i in range(0,11):
-    if i == None or i == ' ':
-        L[i] = '1'
+# for i in range(0,11):
+#     if i == None or i == ' ':
+#         L[i] = '1'
+
+
+
+# with open('ramos.csv', 'r') as obj:
+#     for row in reader(obj):
+#         a = True
 
 sched_L = [
     {'code': '503120-1', 'sched': 2},
@@ -34,7 +40,7 @@ sched_X = [
     {'code': '510140-8', 'sched': 2}, # Fisica I
     {'code': '510140-8', 'sched': 3}
 ]
-L[5] = 'Intro. Ing Informática'
+#L[5] = 'Intro. Ing Informática'
 #L[3] = 'Intro. Ing Informática'
 
 def scheds():
@@ -158,9 +164,9 @@ ramos = [
 
 table = ['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
 
-with open('sched_data.csv', 'w') as file:
-    file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
-    for i in range(0, 11):
-        file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
+# with open('sched_data.csv', 'w') as file:
+#     file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#     file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
+#     for i in range(0, 11):
+#         file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
 

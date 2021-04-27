@@ -49,50 +49,65 @@ layout = html.Div([
 	html.Div(id='output-state')
 ])
 
-auxgateValue = []
-def getData(vaList): # vaList = ValueList abbreviation
-	conn = sqlite3.connect('data.db')
-	cur = conn.cursor()
-
-	dataQuery = []
-	for i in vaList:
-		cur.execute(f'''SELECT name, schedule, days FROM data WHERE code IS "{i}" ''')
-		aux = cur.fetchall()
-		dataQuery.append(aux)
-	# outQuery = cur.fetchall()
-	# dataQuery = []
-	# for i in outQuery:
-	# 	dataQuery.append(i[0])
-	conn.commit()
-	cur.close()
-	print(dataQuery)
-
-	# for i in dataQuery:
-	# 	i[0][1]
-	
-	# for i in data:
-	# 	days[schedule] = name
-
-	# with open('sched_data.csv', 'w') as file:
-	# 	file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	# 	file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
-	# for i in range(0, 11):
-	# 	file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
-
-	return dataQuery
-
-
 @app.callback(
 	Output('output-state', 'children'),
 	[Input('dropdown-s', 'value')]
 )
 def update_output(value):
-	with open('ramos.csv', 'w') as file:
+	conn = sqlite3.connect('data.db')
+	cur = conn.cursor()
+	cur.execute(f'UPDATE data SET chosen = 0')
+
+	dataQuery = []
+	for i in value:
+		cur.execute(f'UPDATE data SET chosen = 1 WHERE code IS "{i}"')
+		cur.execute(f'''SELECT chosen, name, schedule, days FROM data WHERE code IS "{i}" ''')
+		aux = cur.fetchall()
+		dataQuery.append(aux)	
+
+	conn.commit()
+	cur.close()
+	print(dataQuery)
+
+
+	H = [t for t in range(1, 12)]
+	hora = [f'{h}:15 - {h+1}:00' for h in range(8, 19)]
+	L = ['' for l in range(1, 12)]
+	M = ['' for m in range(1, 12)]
+	X = ['' for x in range(1, 12)]
+	J = ['' for j in range(1, 12)]
+	V = ['' for v in range(1, 12)]
+
+	L[4] = 'Tshh'
+	
+	# outQuery = cur.fetchall()
+	# dataQuery = []
+	# for i in outQuery:
+	# 	dataQuery.append(i[0])
+	# for i in data:
+	# 	days[schedule] = name
+
+	# dataQuery[0][0]
+	# ('Cálculo I[6]', 'M-J', '0-1, 0-1')
+
+	# dataQuery[0][0][1] == Days
+	# dataQuery[0][0][2] == Schedule
+
+	with open('sched_data.csv', 'w') as file:
 		file = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-		file.writerow(value)
-	# schedUpdate(codes=value)
-	getData(value)
+		file.writerow(['H', 'Horario', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'])
+		for i in range(0, 11):
+			file.writerow([f'{H[i]}', f'{hora[i]}', f'{L[i]}', f'{M[i]}', f'{X[i]}', f'{J[i]}', f'{V[i]}'])
+
 	return f'You have selected {value}!'
+
+
+
+# for i in range(0,11):
+#     if i == None or i == ' ':
+#         L[i] = '1'
+
+
 
 @app.callback(
 	Output('main', 'pathname'),
