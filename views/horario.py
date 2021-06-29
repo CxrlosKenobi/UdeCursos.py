@@ -6,9 +6,13 @@ from dash.dependencies import Input, Output, State
 from server import app
 from datapy import subjects, semesters, table
 import pandas as pd
-import csv
+import sqlite3
 
 df = pd.read_csv('sched_data.csv')
+conn = sqlite3.connect("data.db")
+cursor = conn.cursor()
+
+df = pd.read_sql("SELECT name FROM data WHERE chosen IS TRUE", conn)
 
 layout = html.Div([
     dcc.Location(id='horario', refresh=True),

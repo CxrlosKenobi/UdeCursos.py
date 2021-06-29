@@ -106,7 +106,6 @@ def display_page(pathname):
     if pathname == '/':
         return main.layout
     elif pathname == '/horario':
-        sleep(2)
         return horario.layout
     elif pathname == '/malla':
         return malla.layout
