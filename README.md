@@ -1,5 +1,5 @@
 # UdeCursos.py 
-> This is a conceptual version of what now is the ![UdeCursos](https://github.com/CxrlosKenobi/udecursos) platform, check it out their ![beta](https://github.com/CxrlosKenobi/udecursos) now!
+> This was a conceptual version of what now is the ![UdeCursos](https://github.com/CxrlosKenobi/udecursos) platform, check it out their ![beta](https://github.com/CxrlosKenobi/udecursos) now!
 ### 🚀 Visual designed platform where students 🎓 can take a better look to their subjects and their schedules, according to their degree at the Universidad de Concepción.
 
 ## Current working stage
